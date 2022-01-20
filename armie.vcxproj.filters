@@ -24,12 +24,18 @@
     <ClCompile Include="horse.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="human.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="weapons.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="horse.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="human.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
