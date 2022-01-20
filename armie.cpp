@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include "weapons.h"
+#include "party.h"
 
 int main()
 {

@@ -41,6 +41,9 @@ public:
     }
 };
 class arrow :public weapon {
+//
+// если не забуду, то здесь должен появится коэфициентов урона
+//
 public:
 };
 class quiver :public arrow{
