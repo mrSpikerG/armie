@@ -5,8 +5,11 @@ class human
 {
 protected:
 	int hp;
-	weapon *weapon;
+	weapon *weap;
 public:
+	weapon* getWeapon() {
+		return this->weap;
+	}
 };
 
 
@@ -15,18 +18,18 @@ private:
 public:
 	warrior()
 	{
-		this->weapon = new sword();
+		this->weap = new sword();
 		this->hp = 300;
 	}
 };
 class bowman : public human {
 private:
+public:
 	bowman()
 	{
-		this->weapon = new bow();
+		this->weap = new bow();
 		this->hp = 115;
 	}
-public:
 };
 class horseman : public human {
 private:
@@ -34,7 +37,12 @@ private:
 public:
 	horseman()
 	{
-		this->weapon = new spear();
-		this->hp = 250;
+		this->weap = new spear();
+		this->hp = 250 + Konb->getHP();
 	}
+
+	horse *getHorse() {
+		return this->Konb;
+	}
+
 };

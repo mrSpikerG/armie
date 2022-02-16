@@ -140,10 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="armie.cpp" />
-    <ClCompile Include="horse.cpp" />
-    <ClCompile Include="human.cpp" />
-    <ClCompile Include="party.cpp" />
-    <ClCompile Include="weapons.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="horse.h" />
