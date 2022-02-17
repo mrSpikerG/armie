@@ -30,8 +30,8 @@ public:
 	warrior()
 	{
 		this->weap = new sword();
-		this->hp = 300;
-		this->type = "Воин";
+		this->hp = 30;
+		this->type = "Warrior";
 	}
 };
 class bowman : public human {
@@ -40,8 +40,8 @@ public:
 	bowman()
 	{
 		this->weap = new bow();
-		this->hp = 115;
-		this->type = "Лучник";
+		this->hp = 15;
+		this->type = "Bowman";
 	}
 };
 class horseman : public human {
@@ -51,8 +51,8 @@ public:
 	horseman()
 	{
 		this->weap = new spear();
-		this->hp = 250 + Konb->getHP();
-		this->type = "Наездник";
+		this->hp = 25 + Konb->getHP();
+		this->type = "Horseman";
 	}
 
 	horse *getHorse() {

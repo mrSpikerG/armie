@@ -7,7 +7,7 @@ public:
 	horse()
 	{
 		//сильный конь
-		this->hp = 225;
+		this->hp = 25;
 	}
 	int getHP() {
 		return this->hp;

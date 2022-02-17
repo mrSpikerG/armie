@@ -9,16 +9,10 @@ struct Node {
 	}
 };
 
-//украл эту функцию из интернета p.s.: это должно работать как instanceof из джавы
-template<typename Base, typename T>
-inline bool instanceof(const T*) {
-	return is_base_of<Base, T>::value;
-}
-
 class party
 {
 private:
-	size_t size;
+	int size;
 	Node* commander;
 public:
 
@@ -97,9 +91,9 @@ public:
 		Node* tmp = this->commander;
 		while (tmp->next != nullptr) {
 
-			if (instanceof<warrior>(tmp->guy)) { warriors++; }
-			if (instanceof<bowman>(tmp->guy)) { bowmans++; }
-			if (instanceof<horseman>(tmp->guy)) { horsemans++; }
+			if (tmp->guy->getType()=="Воин") { warriors++; }
+			if (tmp->guy->getType() == "Лучник") { bowmans++; }
+			if (tmp->guy->getType() == "Наездник") { horsemans++; }
 
 			tmp = tmp->next;
 		}
