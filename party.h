@@ -73,6 +73,23 @@ public:
 		this->size++;
 	}
 
+	void remove(int num) {
+		if (num == 0) {
+			this->commander = this->commander->next;
+		}
+		else {
+			Node* tmp = this->commander;
+			for (int i = 0; i < num-1; i++) {
+				tmp = tmp->next;
+			}
+			tmp->next = tmp->next->next;
+		}
+		
+
+		this->size--;
+
+	}
+
 	void info() {
 		int warriors = 0;
 		int bowmans = 0;

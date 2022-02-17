@@ -10,6 +10,12 @@ public:
 	weapon* getWeapon() {
 		return this->weap;
 	}
+	void setHP(int hp) {
+		this->hp = hp;
+	}
+	int getHP() {
+		return this->hp;
+	}
 };
 
 
