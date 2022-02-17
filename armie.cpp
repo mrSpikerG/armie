@@ -1,32 +1,18 @@
 ﻿#include <iostream>
 #include "party.h"
 
-//template<typename Base, typename T>
-//inline bool instanceof(const T*) {
-//	return is_base_of<Base, T>::value;
-//}
+
 
 void war(party* first, party *second) {
 	
-	/*if (first->getSize() < second->getSize()) {
-		swap(first, second);
-	}*/
-
-
 	int i = 0, j = 0;
 
-	while (true) {
+	while (first->getSize() > 0||second->getSize()>0) {
 		if (i == first->getSize()) { i = 0; }
 		if (j == second->getSize()) { j = 0; }
 
-		second->getById(j)->setHP(first->getById(i)->getWeapon()->atack() + second->getById(j)->getHP());
-		/*if (instanceof<warrior>(first->getById(i))) { cout << "\nВоин ударил "; };
-		if (instanceof<horseman>(first->getById(i))) { cout << "\nНаездник ударил "; };
-		if (instanceof<bowman>(first->getById(i))) { cout << "\nЛучник выстрелил в "; };
-
-		if (instanceof<warrior>(second->getById(j))) { cout << "Воина"; };
-		if (instanceof<horseman>(second->getById(j))) { cout << "Наездника"; };
-		if (instanceof<bowman>(second->getById(j))) { cout << "Лучника"; };*/
+		second->getById(j)->setHP(second->getById(j)->getHP() - first->getById(i)->getWeapon()->atack());
+		cout <<"\n" << first->getById(i)->getType() << " атаковал " << second->getById(j)->getType() << "a";
 
 		if (second->getById(j)->getHP() <= 0) {
 			second->remove(j);
@@ -36,14 +22,9 @@ void war(party* first, party *second) {
 
 		}
 		
-		first->getById(i)->setHP(second->getById(j)->getWeapon()->atack() + first->getById(i)->getHP());
-		/*if (instanceof<warrior>(second->getById(j))) { cout << "\nВоин ударил "; };
-		if (instanceof<horseman>(second->getById(j))) { cout << "\nНаездник ударил "; };
-		if (instanceof<bowman>(second->getById(j))) { cout << "\nЛучник выстрелил в "; };
+		first->getById(i)->setHP(second->getById(j)->getWeapon()->atack() - first->getById(i)->getHP());
+		cout << "\n" << first->getById(i)->getType() << " атаковал " << second->getById(j)->getType() << "a";
 
-		if (instanceof<warrior>(first->getById(i))) { cout << "Воина"; };
-		if (instanceof<horseman>(first->getById(i))) { cout << "Наездника"; };
-		if (instanceof<bowman>(first->getById(i))) { cout << "Лучника"; };*/
 
 		if (first->getById(i)->getHP() <= 0) {
 			first->remove(i);

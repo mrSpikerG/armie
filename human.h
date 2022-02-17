@@ -5,6 +5,7 @@ class human
 {
 protected:
 	int hp;
+	string type;
 	weapon *weap;
 public:
 	weapon* getWeapon() {
@@ -16,6 +17,10 @@ public:
 	int getHP() {
 		return this->hp;
 	}
+	string getType() {
+		return this->type;
+	}
+
 };
 
 
@@ -26,6 +31,7 @@ public:
 	{
 		this->weap = new sword();
 		this->hp = 300;
+		this->type = "Воин";
 	}
 };
 class bowman : public human {
@@ -35,6 +41,7 @@ public:
 	{
 		this->weap = new bow();
 		this->hp = 115;
+		this->type = "Лучник";
 	}
 };
 class horseman : public human {
@@ -45,6 +52,7 @@ public:
 	{
 		this->weap = new spear();
 		this->hp = 250 + Konb->getHP();
+		this->type = "Наездник";
 	}
 
 	horse *getHorse() {
